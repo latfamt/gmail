@@ -1,16 +1,24 @@
 ## To execute
-### 1. Сreate a virtual environment
+
+### 1. Start the Docker containter
+```
+docker run -d -P -p 4444:4444 -p 5900:5900 -v /dev/shm:/dev/shm selenium/standalone-chrome-debug:3.141.59-bismuth
+```
+### 2. Сreate a virtual environment
 ```
 python -m venv gm_venv
 ```
-### 2. Activate a virtual environment
+### 3. Activate the virtual environment
 ```
 source gm_venv/bin/activate
 ```
-### 3. Install requirements
+### 4. Install requirements
 ```
 pip install -r requirements.txt
 ```
-### 4. Start the test
+### 5. Start the test
 ```
 pytest tests/test_gmail.py
+```
+### 6. To inspect visually what the browser is doing
+In VNC viewer connect: ```127.0.0.1:5900```
