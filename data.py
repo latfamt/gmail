@@ -1,6 +1,6 @@
 import time
 
-about_gmail_link = 'https://www.google.com/intl/ru/gmail/about/#'
+about_gmail_link = 'gmail/about/#'
 recovery_page_url = 'https://myaccount.google.com/signinoptions/recovery-options-collection'
 
 test_message_subject = f'Test Message Subject {str(int(time.time()))}'
