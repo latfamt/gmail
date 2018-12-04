@@ -66,7 +66,11 @@ def reply(driver):
 
 def check_message_as_read(driver, message_subject):
     CHECKBOX = By.XPATH, f"//span[contains(text(), '{message_subject}')]/ancestor::div[@role='main']//td[contains(@class, 'oZ-x3')]"
-    WebDriverWait(driver, 60).until(EC.visibility_of_element_located(CHECKBOX)).click()
+    try:
+        WebDriverWait(driver, 60).until(EC.visibility_of_element_located(CHECKBOX)).click()
+    except TimeoutException:
+        driver.refresh()
+        WebDriverWait(driver, 60).until(EC.visibility_of_element_located(CHECKBOX)).click()
     WebDriverWait(driver, 60).until(EC.element_to_be_clickable(READ_BTN)).click()
 
 
