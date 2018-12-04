@@ -9,11 +9,11 @@ from urllib3.exceptions import ProtocolError
 def driver_init(request):
     try:
         web_driver = webdriver.Remote("http://127.0.0.1:4444/wd/hub", DesiredCapabilities.CHROME)
-        web_driver.get('http://google.ru')
+        web_driver.get('http://google.com')
     except ProtocolError:
         sleep(30)
         web_driver = webdriver.Remote("http://127.0.0.1:4444/wd/hub", DesiredCapabilities.CHROME)
-        web_driver.get('http://google.ru')
+        web_driver.get('http://google.com')
     web_driver.set_window_size(1920, 1080)
     web_driver.implicitly_wait(30)
     request.cls.driver = web_driver
