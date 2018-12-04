@@ -8,11 +8,11 @@ from selenium.common.exceptions import WebDriverException
 @pytest.fixture(scope="function")
 def driver_init(request):
     try:
-        web_driver = webdriver.Remote("http://172.19.0.2:4444/wd/hub", DesiredCapabilities.CHROME)
+        web_driver = webdriver.Remote("http://127.0.0.1:4444/wd/hub", DesiredCapabilities.CHROME)
         web_driver.get('http://google.ru')
     except WebDriverException:
         sleep(60)
-        web_driver = webdriver.Remote("http://172.19.0.2:4444/wd/hub", DesiredCapabilities.CHROME)
+        web_driver = webdriver.Remote("http://127.0.0.1:4444/wd/hub", DesiredCapabilities.CHROME)
         web_driver.get('http://google.ru')
     web_driver.set_window_size(1920, 1080)
     web_driver.implicitly_wait(30)
