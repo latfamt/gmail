@@ -22,3 +22,4 @@ pytest tests/test_gmail.py
 ```
 ### 6. Inspect visually what the browser is doing
 In VNC viewer connect: ```127.0.0.1:5900```
+(password: secret)
