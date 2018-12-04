@@ -1,6 +1,5 @@
 import pytest
-from data import test_message_text, test_message_subject, reply_message_text, \
-    sender_email, sender_password, receiver_email, receiver_password
+from data import test_message_text, test_message_subject, reply_message_text
 from pages.google_page import go_to_mail
 from pages.inbox_page import add_mail, enter_receiver_email, enter_subject, enter_message, send_message, open_message, \
     logout, change_account, text_of_message, reply, check_message_as_read, notification
@@ -8,8 +7,9 @@ from pages.logon_page import enter_email, enter_password
 
 
 @pytest.mark.usefixtures("driver_init")
+@pytest.mark.unit
 class TestGmail:
-    def test_gmail(self):
+    def test_gmail(self, sender_email, sender_password, receiver_email, receiver_password):
         go_to_mail(self.driver)
         enter_email(self.driver, email=sender_email)
         enter_password(self.driver, password=sender_password)
