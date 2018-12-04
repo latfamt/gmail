@@ -1,7 +1,7 @@
 from selenium.webdriver.common.by import By
 from data import about_gmail_link
 
-MAIL_LINK = By.CSS_SELECTOR, ".gb_P[href='https://mail.google.com/mail/?tab=wm']"
+MAIL_LINK = By.CSS_SELECTOR, "a.gb_P[data-pid='23']"
 ENTER_MAIL = By.CSS_SELECTOR, '.gmail-nav__nav-link__sign-in'
 
 
