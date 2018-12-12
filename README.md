@@ -18,8 +18,9 @@ pip install -r requirements.txt
 ```
 ### 5. Start the test
 ```
-pytest tests/test_gmail.py --sender_email [MAIL_#1] --sender_password [PASSWORD_#1] --receiver_email [MAIL_#2] --receiver_password [PASSWORD_#2]
+pytest tests/test_gmail.py --sender_email MAIL_#1 --sender_password PASSWORD_#1 --receiver_email MAIL_#2 --receiver_password PASSWORD_#2
 ```
+MAIL_#1, PASSWORD_#1, MAIL_#2, PASSWORD_#2 - write emails and passwords of 2 Google accounts
 ### 6. Inspect visually what the browser is doing
 In VNC viewer connect: ```127.0.0.1:5900```
 
