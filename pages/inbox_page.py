@@ -12,7 +12,7 @@ SEND_BUTTON = By.CSS_SELECTOR, ".aoO"
 NOTIFICATION = By.CSS_SELECTOR, ".aT"
 READ_BTN = By.CSS_SELECTOR, "div[gh='mtb'] .bzn .G-tF div:nth-of-type(3) div.m9"
 
-ACCOUNT_MENU_BTN = By.CSS_SELECTOR, ".gb_ab"
+ACCOUNT_MENU_BTN = By.CSS_SELECTOR, ".gb_cb.gbii"
 LOGOUT_BTN = By.CSS_SELECTOR, "#gb_71"
 
 ACTIVE_ACCOUNT_BTN = By.CSS_SELECTOR, "#profileIdentifier"
